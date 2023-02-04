@@ -66,6 +66,10 @@ class API {
             Error(ApplicationManipulated);
             return resolve(false);
         }
+        else if (response.status == "invalid_app") {
+            Error(InvalidApplication);
+            return resolve(false);
+        }
         else if (response.status == "paused") {
             Error(ApplicationPaused);
             return resolve(false);
